@@ -361,6 +361,12 @@ def main():
     # menu
     escolha = menu_loop()
     if escolha != 'play':
+        # salvar recorde ao sair do menu se for maior
+        try:
+            if jogador.score > highscore:
+                save_highscore(jogador.score)
+        except Exception:
+            pass
         pygame.quit()
         sys.exit()
 
@@ -491,6 +497,12 @@ def main():
 
         pygame.display.flip()
 
+    # salvar recorde ao sair do jogo se for maior
+    try:
+        if jogador.score > highscore:
+            save_highscore(jogador.score)
+    except Exception:
+        pass
     pygame.quit()
     sys.exit()
 
