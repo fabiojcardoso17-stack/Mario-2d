@@ -1,0 +1,13 @@
+# Arquivos Python
+__pycache__/
+*.pyc
+
+# Editor
+.vscode/
+
+# Ambientes
+venv/
+.env
+
+# Assets grandes (se desejar manter localmente)
+assets/
